@@ -1,0 +1,11 @@
+<p>
+	<strong>Project:</strong>
+	<%= @project.title %>
+</p>
+
+<p>
+	<%= @project.text %>
+</p>
+
+<%= link_to 'Back', projects_path %>
+ | <%= link_to 'Edit', edit_project_path(@project) %>
