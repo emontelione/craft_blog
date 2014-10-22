@@ -1,0 +1,45 @@
+html {
+	background: url("knit.jpg") no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.craft_photo {
+	height: 40%;
+	width: 40%;
+}
+
+.craft_table {
+	position: relative;
+	text-align: center;
+	margin: auto;
+	width: 60%;
+	background-color: #FAFAFA;
+}
+
+/*#projects_header {
+	text-align: center;
+	color: #616161;
+	font-family: Georgia;
+}
+*/
+
+.header_div {
+	background-color: #515960;
+	height: 40px;
+	width: 110%;
+	border-radius: 2px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+.header_text {
+	font-size: 20px;
+	font-family: Helvetica;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+	padding-top: 10px;
+}

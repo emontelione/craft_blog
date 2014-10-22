@@ -1,3 +1,5 @@
-<div>
-	<%= link_to "HOME", projects_path %>
+<link rel="stylesheet" type="text/css" href="application.css.scss">
+<div class="header_div">
+	<%= link_to "HOME", projects_path, class: "header_text" %>
+	<%= link_to 'NEW PROJECT', new_project_path, class: "header_text" %>
 </div>

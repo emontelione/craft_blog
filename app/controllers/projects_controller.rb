@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
 
 	def new
 		@project = Project.new
+		@project.images.build
 	end
 
 	def index
@@ -14,6 +15,7 @@ class ProjectsController < ApplicationController
 
 	def create
 		@project = Project.new(project_params)
+		@project.images.build({:filename => "testing.jpg"})
 
 		if @project.save
 			redirect_to @project
