@@ -1,4 +1,4 @@
-<%= form_for :project, url: projects_path do |f| %>
+<%= form_for @project do |f| %>
   <% if @project.errors.any? %>
   <div>
     <% @project.errors.full_messages.each do |error_message| %>
@@ -6,23 +6,16 @@
     <% end %>
   </div>
   <% end %>
-  <p>
+  <p class="regular_text">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "title_field"%>
   </p>
  
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+  <p class="regular_text">
+    <%= f.label :description %><br>
+    <%= f.text_area :text, class: "text_box" %>
   </p>
-
-  <p>
-    <%= f.fields_for :images do |p| %>
-      <%= p.label :filename %>
-      <%= p.text_field :filename %>
-    <% end %>
-  </p>
-
-  <%= f.submit %>
+  <p style="padding-bottom: 20px">
+    <%= f.submit %>
   </p>
 <% end %>

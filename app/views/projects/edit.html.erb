@@ -1,5 +1,10 @@
-<h1>Edit Project</h1>
+<div class="craft_table">
+
+	<h1 class="title_text">Edit Project</h1>
  
-<%= render 'form' %>
+	<%= render 'form' %>
  
-<%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } %>
+	<div style="padding-bottom: 10px">
+		<%= link_to 'Delete Project', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: "red_link" %>
+	</div>
+</div>

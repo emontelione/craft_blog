@@ -1,11 +1,19 @@
-<p>
-	<strong>Project:</strong>
-	<%= @project.title %>
-</p>
+<div class= "craft_table">
+<table>
+	<tr>
+		<td class="title_text"><strong><%= @project.title %></strong></td>
+	</tr>
 
-<p>
-	<%= @project.text %>
-</p>
+	<tr>
+		<td class="regular_text"><%= @project.text %></td>
+	</tr>
 
-</br>
-<%= link_to 'Edit', edit_project_path(@project) %>
+	<% @project.images.each do |image| %>
+    	<tr>
+			<td><%= image_tag(image.filename, class: "craft_photo") %></td>
+    	</tr>
+	<% end %>
+
+	<td class="bottom_link"><%= link_to 'Edit', edit_project_path(@project), class: "red_link" %></td>
+</table>
+</div>

@@ -7,8 +7,8 @@ html {
 }
 
 .craft_photo {
-	height: 40%;
 	width: 40%;
+	padding-bottom: 5px;
 }
 
 .craft_table {
@@ -19,20 +19,18 @@ html {
 	background-color: #FAFAFA;
 }
 
-/*#projects_header {
-	text-align: center;
-	color: #616161;
-	font-family: Georgia;
-}
-*/
-
 .header_div {
 	background-color: #515960;
 	height: 40px;
-	width: 110%;
+	width: 101.25%;
 	border-radius: 2px;
 	margin-left: -10px;
 	margin-top: -10px;
+}
+
+.header_links_div {
+	padding-top: 10px;
+	padding-left: 10px;
 }
 
 .header_text {
@@ -42,4 +40,43 @@ html {
 	text-decoration: none;
 	padding: 5px;
 	padding-top: 10px;
+	padding-right: 15px;
+}
+
+.title_text {
+	font-size: 20px;
+	font-family: Helvetica;
+	color: #515960;
+	padding-top: 20px;
+	margin-top: 0px;
+	padding-bottom: 15px;
+}
+
+.regular_text {
+	font-size: 15px;
+	font-family: Helvetica;
+	color: #515960;
+	padding-bottom: 20px;
+}
+
+.text_box {
+	width: 360px;
+	height: 120px;
+	margin-top: 7px;
+}
+
+.title_field {
+	margin-top: 7px;
+	width: 360px;
+}
+
+.red_link {
+	font-family: Helvetica;
+	color: #711414;
+	text-decoration: none;
+}
+
+.bottom_link {
+	padding-top: 20px;
+	padding-bottom: 10px;
 }

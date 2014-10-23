@@ -1,0 +1,10 @@
+<link rel="stylesheet" type="text/css" href="application.css.scss">
+<table class= "craft_table">
+
+  <% @images.each do |image| %>
+    <tr>
+		<td><%= image_tag(image.filename, class: "craft_photo") %></td>
+    </tr>
+  <% end %>
+  
+</table>

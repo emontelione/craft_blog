@@ -1,11 +1,19 @@
 <link rel="stylesheet" type="text/css" href="application.css.scss">
 <table class= "craft_table">
-
-  <% @projects.each do |project| %>
+	<tr>
+		<td class="title_text"><strong>Projects</strong></td>
+	</tr>
+		<tr>
+		<td class="regular_text">Click an image to see more of that project.</td>
+	</tr>
+  	<% @projects.each do |project| %>
     <tr>
+    <% if project.images.first %>
+        <td style="padding-bottom: 20px"><%= link_to image_tag(project.images.first.filename, class: "craft_photo"), project_path(project) %></td>
+    <% else %>
     	<td><%= link_to project.title, project_path(project) %></td>
-<!--       <td><%= link_to image_tag("blue_knit_pillow.jpg", class: "craft_photo"), project_path(project) %></td> -->
-    </tr>
+    <% end %>
+  	</tr>
   <% end %>
   
 </table>

@@ -2,7 +2,6 @@ class ProjectsController < ApplicationController
 
 	def new
 		@project = Project.new
-		@project.images.build
 	end
 
 	def index
@@ -15,7 +14,6 @@ class ProjectsController < ApplicationController
 
 	def create
 		@project = Project.new(project_params)
-		@project.images.build({:filename => "testing.jpg"})
 
 		if @project.save
 			redirect_to @project
@@ -31,7 +29,7 @@ class ProjectsController < ApplicationController
 	def update
 		@project = Project.find(params[:id])
 
-		if @project.update(project_params)
+		if @project.update_attributes(project_params)
 			redirect_to @project
 		else
 			render 'edit'
